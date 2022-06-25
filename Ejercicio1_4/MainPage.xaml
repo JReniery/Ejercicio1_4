@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1_4.MainPage">
+
+    <StackLayout>       
+        
+        <ImageButton Source="camera.png" 
+                     WidthRequest="200"
+                     Aspect="AspectFit"
+                     x:Name="imgPhoto"
+                     BackgroundColor="White"
+                     Margin="20"
+                     Clicked="imgPhoto_Clicked"/>       
+
+        <Label Text="Nombre" Margin="20,10,0,0" FontSize="Title"/>
+        <Entry x:Name="txbName" Margin="20,0,20,0"/>
+
+        <Label Text="Descripción" Margin="20,10,0,0" FontSize="Title"/>
+        <Entry x:Name="txbDescrip" Margin="20,0,20,0"/>
+
+        <Button Text="Guardar" HorizontalOptions="FillAndExpand" 
+                Padding="20,0" x:Name="btnSave" 
+                CornerRadius="25"
+                Margin="20,0"
+                BackgroundColor="#FF0266"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="btnSave_Clicked"/>
+        
+        <Button Text="Galería" HorizontalOptions="FillAndExpand" 
+                Padding="20,0" x:Name="btnGallery" 
+                CornerRadius="25"
+                Margin="20,0"
+                BackgroundColor="#0336FF"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="btnGallery_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>

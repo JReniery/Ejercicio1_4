@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     
+                  xmlns:Converter="clr-namespace:Ejercicio1_4.Converter" 
+                  x:Class="Ejercicio1_4.Views.ShowPhoto">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Converter:ByteArrayToImage x:Key="ByteToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Center">
+        <Frame CornerRadius="10"
+               Padding="0">
+            <StackLayout>
+                
+                <Label FontSize="Title"
+                       FontAttributes="Bold"
+                       Margin="10"
+                       Text="{Binding PhotoName}"/>
+                
+                <Image Aspect="Fill"                    
+                       Source="{Binding Photo, Converter={StaticResource ByteToImage}}" />
+                
+                <Label FontSize="Subtitle"
+                       FontAttributes="Italic"
+                       Margin="10"
+                       Text="{Binding Descrip}"/>
+            </StackLayout>  
+
+        </Frame>        
+    </StackLayout>
+    
+</popup:PopupPage>
